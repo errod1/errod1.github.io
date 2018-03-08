@@ -41,6 +41,7 @@
 				<div class="content container" style="text-align: center;max-width: 900px;">
 					<div class="row">
 						<h1>Juega y Gana!, Peru-Rusia2018 </h1>
+						<img id="winner" src="img/winner.gif" />
 					</div>
 					<div class="row">
 						<div class='col-md-6 col-xs-12' style='margin-top: 50px'>
@@ -51,8 +52,8 @@
 											<div><img src="img/slot1.png" /></div>
 											<div><img src="img/slot2.png" /></div>
 											<div><img src="img/slot3.png" /></div>
-											<div><img src="img/slot4.png" /></div>
-											<!--<div><img src="img/slot5.png" /></div>
+											<!--<div><img src="img/slot4.png" /></div>
+											<div><img src="img/slot5.png" /></div>
 											<div><img src="img/slot6.png" /></div>-->
 										</div>
 									</div>
@@ -63,8 +64,8 @@
 											<div><img src="img/slot1.png" /></div>
 											<div><img src="img/slot2.png" /></div>
 											<div><img src="img/slot3.png" /></div>
-											<div><img src="img/slot4.png" /></div>
-											<!--<div><img src="img/slot5.png" /></div>
+											<!--<div><img src="img/slot4.png" /></div>
+											<div><img src="img/slot5.png" /></div>
 											<div><img src="img/slot6.png" /></div>-->
 										</div>
 									</div>
@@ -75,8 +76,8 @@
 											<div><img src="img/slot1.png" /></div>
 											<div><img src="img/slot2.png" /></div>
 											<div><img src="img/slot3.png" /></div>
-											<div><img src="img/slot4.png" /></div>
-											<!--<div><img src="img/slot5.png" /></div>
+											<!--<div><img src="img/slot4.png" /></div>
+											<div><img src="img/slot5.png" /></div>
 											<div><img src="img/slot6.png" /></div>-->
 										</div>
 									</div>
@@ -147,16 +148,23 @@
 				<script>
 					$(document).ready(function(){
 						var html='';
+						var premios=[25000,20000,15000,10000,5000,1000,500];
 						for(i=1;i<=6;i++) {
-							html+='<div class="col-xs-12" style="padding-left: 0px; margin-bottom: 10px;">';
+							html+='<div class="row" style="padding-left: 0px; margin-bottom: 10px;">';
+							html+='<div class="col-xs-6" style="padding: 0px;" >';
 							html+='<img class="minislot" src="img/slot'+i+'.png" width="50px" height="50px" />&nbsp;&nbsp;';
 							html+='<img class="minislot" src="img/slot'+i+'.png"width="50px" height="50px"/>&nbsp;&nbsp;';
 							html+='<img class="minislot" src="img/slot'+i+'.png" width="50px" height="50px"/>';
-							html+='&nbsp;';
-							html+='<b>Primer premio S/. 25000</b>';
+							html+="</div>";
+							html+='<div class="col-xs-6" style="margin-top: 20px; ">';
+							html+='&nbsp;&nbsp;';
+							html+='<b>'+i+'o premio S/. '+premios[i]+' </b>';
+							html+='</div>';
 							html+='</div>';
 
+
 						}
+						$("#winner").hide();
 						$("#premios1").html(html);
 
 						var index1=-1;
@@ -223,7 +231,8 @@
 				<!-- Slot machine example -->
 				<div id="casino" style="padding-top:50px;">
 					<div class="content">
-						<h1>Use the API</h1>
+						<h1>Juega y Gana!, Peru-Rusia2018 </h1>
+						<img id="winner2" src="img/winner.gif" />
 
 						<div>
 							<div id="casino1" class="slotMachine" style="margin-left: -65px;">
@@ -254,8 +263,8 @@
 							</div>
 
 							<div class="btn-group btn-group-justified btn-group-casino" role="group">
-								<div id="slotMachineButtonShuffle" type="button" class="btn btn-primary btn-lg">Shuffle!</div>
-								<div id="slotMachineButtonStop" type="button" class="btn btn-primary btn-lg">Stop!</div>
+								<div id="slotMachineButtonShuffle" type="button" class="btn btn-primary btn-lg">Jugar!</div>
+								<div id="slotMachineButtonStop" type="button" class="btn btn-primary btn-lg">Parar!</div>
 							</div>
 						</div>
 
@@ -264,6 +273,7 @@
 				</div>
 				<script>
 					$(document).ready(function(){
+						$("#winner2").hide();
 						var machine4 = $("#casino1").slotMachine({
 							active	: 0,
 							delay	: 500
@@ -320,7 +330,8 @@
 					function checkWin(index1,index2,index3) {
 						console.log("*** check winner "+index1+";"+index2+";"+index3)
 						if (index1==index2 && index2==index3) {
-							alert("WIN!!!! ");
+							//alert("WIN!!!! ");
+							$("#winner").show();
 						}
 			   //do whatever you want here
 			}
