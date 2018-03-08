@@ -18,7 +18,11 @@
 
 
 
-
+h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+    color: aliceblue;
+}
 
 
 
@@ -173,25 +177,45 @@ header a {
  * SlotMachine
  */
 #randomize {
-    height: 400px;
+    height: 800px;
     border-bottom: 10px solid rgb(72, 158, 48);
-    background-color: #EB6B56;
+    background-color: #002ccd8f;
+    /*background-image: url("../img/backperu.jpg");
+    background-repeat: no-repeat;*/
     border-top: 20px dotted #B8312F;
 }
 
 #randomize .row > div.col-xs-4 {
-    padding-left: 35px;
+    padding-left: 0px;
+    /*padding-left: 35px;*/
 }
 
 #randomize .row > div.col-xs-4 > div {
-    padding-top: 40px;
-    padding-left: 40px;
-    width: 175px;
-    height: 175px;
+    padding-top: 26px;
+    padding-left: 26px;
+    width: 155px;
+    height: 155px;
     background-color: #fff;
     border-radius: 50%;
     margin: auto;
 }
+
+
+.minislot {
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+
+
+
+
 
 .randomizeMachine {
     width: 100px;
