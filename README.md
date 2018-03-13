@@ -1,164 +1,62 @@
-#jQuery-SlotMachine [![Build Status](https://travis-ci.org/josex2r/jQuery-SlotMachine.svg?branch=master)](https://travis-ci.org/josex2r/jQuery-SlotMachine) [![Dependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine) [![devDependency Status](https://david-dm.org/josex2r/jQuery-SlotMachine/dev-status.svg)](https://david-dm.org/josex2r/jQuery-SlotMachine#info=devDependencies)
+# [Start Bootstrap - Stylish Portfolio](https://startbootstrap.com/template-overviews/stylish-portfolio/)
 
-A simple, lightweight jQuery plugin to make slot machine animation effect.
+[Stylish Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/) is a responsive, one page portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). The theme features multiple content sections with an off canvas navigation menu.
 
-[Check the example page!] (http://josex2r.github.io/jQuery-SlotMachine/)
+## Preview
 
-## Installation
+[![Stylish Portfolio Preview](https://startbootstrap.com/assets/img/templates/stylish-portfolio.jpg)](https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/)
 
-Install the component using [Bower](http://bower.io/):
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/)**
 
-```sh
-$ bower install jquery-slotmachine --save
-```
+## Status
 
-Include the script located in *dist* folder *after* the jQuery library:
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-stylish-portfolio/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-stylish-portfolio.svg)](https://www.npmjs.com/package/startbootstrap-stylish-portfolio)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-stylish-portfolio.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-stylish-portfolio)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-stylish-portfolio/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-stylish-portfolio)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-stylish-portfolio/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-stylish-portfolio?type=dev)
 
-```html
-<script src="/path/to/jquery.slotmachine.min.js"></script>
-```
+## Download and Installation
+
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/stylish-portfolio/)
+* Install via npm: `npm i startbootstrap-stylish-portfolio`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio)
 
 ## Usage
 
-Creating the machine:
+### Basic Usage
 
-```javascript
-var machine = $(foo).slotMachine( params );
-```
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-Get machine instance:
+### Advanced Usage
 
-```javascript
-var machine = $(foo).slotMachine();
-```
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-Shuffle:
+## Bugs and Issues
 
-```javascript
-machine.shuffle( repeat, onStopCallback ); //No args to make rotate infinitely, `repeat` is optional
-```
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/stylish-portfolio/).
 
-Change the selected element:
+## Custom Builds
 
-```javascript
-machine.prev(); //Previous element
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-machine.next(); //Next element
-```
+## About
 
-Stop the machine:
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-```javascript
-machine.stop();
-```
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-Get selected element:
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-```javascript
-machine.active; //Current element index
-```
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-Get the selected element if shuffling:
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-```javascript
-machine.futureActive; //Future active element index
-```
+## Copyright and License
 
-Check if the machine is running:
-
-```javascript
-machine.running; //Returns boolean
-```
-
-Check if the machine is stopping:
-
-```javascript
-machine.stopping; //Returns boolean
-```
-
-Check if the machine is visible:
-
-```javascript
-machine.visible; //Returns boolean
-```
-
-Change spin result, if the returned value is out of bounds, the element will be randomly choosen:
-
-```javascript
-machine.setRandomize(foo); //foo must be a function (should return int) or an int
-```
-
-Change spin direction, machine must not be running:
-
-```javascript
-machine.direction = direction; //direction must be a String ('up' || 'down')
-```
-
-Destroy the machine. It will be useful when you want to reuse DOM:
-
-```javascript
-machine.destroy();
-```
-
-## Params
-
-Params must be an object, optionally containing the next parammeters:
-
-#### active
-
-Set the first element
-
-    active: 0
-
-#### delay
-
-Set spin animation time
-
-    delay: 200
-
-#### auto
-
-Pass an int as miliseconds to make the machine auto rotate
-
-    auto: false
-
-#### spins
-
-The number of spins when auto is enabled
-
-    spins: false
-
-#### stopHidden
-
-Stop animation if the element is above or below the screen
-
-    stopHidden: true
-
-#### randomize
-
-Pass a function to select your own random element. This function must return an integer between 0 (first element) and max number of elements.
-
-    randomize: function(activeElementIndex){} //activeElementIndex = current selected index
-
-Example (this machine always shows first element):
-
-```javascript
-$('#foo').slotMachine({
-	randomize : function(activeElementIndex){
-		return 0;
-	}
-});
-```
-#### direction
-
-Animation direction ('up' || 'down')
-
-    direction: 'up'
-
-## Authors
-
-[Jose Luis Represa](https://github.com/josex2r)
-
-##License
-
-jQuery-SlotMachine is released under the [MIT License](http://opensource.org/licenses/MIT).
+Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/gh-pages/LICENSE) license.

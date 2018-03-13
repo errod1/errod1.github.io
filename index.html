@@ -1,227 +1,130 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>jQuery Slot Machine</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">-->
-	<link rel="stylesheet" href="css/bootstrap.min.css" >
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="dist/jquery.slotmachine.css" type="text/css" media="screen" />
+  <title>Stylish Portfolio - Start Bootstrap Template</title>
 
-	<!--<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>-->
-	<script type="text/javascript" src="libs/jquery/jquery.js"></script>
-	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
-	<script src="libs/bootstrap.min.js" ></script>
-	<script type="text/javascript" src="dist/jquery.slotmachine.js"></script>
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/jquery.slotmachine.css" type="text/css" media="screen" />
+  <link href="css/style.css" rel="stylesheet">-->
 
 </head>
 
-<body>
-	<div class="header-line"></div>
+<body id="page-top">
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fa fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#services">Services</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
 
-	<!-- Badge -->
-	<!--<a href="https://github.com/josex2r/jQuery-SlotMachine"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>-->
+  <!-- Header -->
+  <!--<header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">Stylish Portfolio</h1>
+      <h3 class="mb-5">
+        <em>A Free Bootstrap Theme by Start Bootstrap</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
+  </header>-->
 
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <h2>Prueba tu Suerte!</h2>
+          <p class="lead mb-5">Actualiza tus datos y gana!!!</p>
+            <!--<a href="https://unsplash.com/">Unsplash</a>!</p>-->
+            <!--<a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>-->
+            <input type="button" class="btn btn-success btn-xl js-scroll-trigger" onclick="miRuleta.startAnimation();" value="Girar" />
+            <canvas id='canvas' width='400' height='400'>
+              Canvas not supported, use another browser.
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<!-- Intro -->
-		<!--<header>
-			<p>Shuffle your 'divs', randomize your results or make an slide, <br/>
-				<a href="https://github.com/josex2r/jQuery-SlotMachine">jQuery-SlotMachine</a> is not a simple animation plugin</p>
-			</header>-->
+    
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="#">
+              <i class="icon-social-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="#">
+              <i class="icon-social-github"></i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Your Website 2017</p>
+      </div>
+    </footer>
 
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
 
-			<!-- Flight example -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="js/Winwheel.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script src="js/stylish-portfolio.js"></script>
 
-			<div id="randomize">
-				<div class="content container" style="text-align: center;max-width: 900px;">
-					<div class="row">
-						<h1>Juega y Gana!, Peru-Rusia2018 </h1>
-						<img id="winner" src="img/winner.gif" />
-					</div>
-					<div class="row">
-						<div class='col-md-6 col-xs-12' style='margin-top: 50px'>
-							<div class='row' style='margin-bottom: 50px'>
-								<div class="col-xs-4">
-									<div>
-										<div id="machine1" class="randomizeMachine">
-											<div><img src="img/slot1.png" /></div>
-											<div><img src="img/slot2.png" /></div>
-											<div><img src="img/slot3.png" /></div>
-											<!--<div><img src="img/slot4.png" /></div>
-											<div><img src="img/slot5.png" /></div>
-											<div><img src="img/slot6.png" /></div>-->
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
-									<div>
-										<div id="machine2" class="randomizeMachine">
-											<div><img src="img/slot1.png" /></div>
-											<div><img src="img/slot2.png" /></div>
-											<div><img src="img/slot3.png" /></div>
-											<!--<div><img src="img/slot4.png" /></div>
-											<div><img src="img/slot5.png" /></div>
-											<div><img src="img/slot6.png" /></div>-->
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-4">
-									<div>
-										<div id="machine3" class="randomizeMachine">
-											<div><img src="img/slot1.png" /></div>
-											<div><img src="img/slot2.png" /></div>
-											<div><img src="img/slot3.png" /></div>
-											<!--<div><img src="img/slot4.png" /></div>
-											<div><img src="img/slot5.png" /></div>
-											<div><img src="img/slot6.png" /></div>-->
-										</div>
-									</div>
-								</div>
-								<!--<div class='col-xs-4'></div>-->
-							</div>	
-							<div>
-								<div class="btn-group btn-group-justified btn-group-randomize" role="group">
-									<div id="ranomizeButton" type="button" class="btn btn-primary btn-lg">Jugar!</div>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-6 col-xs-12' style='margin-top: 50px'>
-							<div id="premios1"></div>
-						</div>
-					</div>	
+  </body>
 
-					<!--<div class="row" style='margin-top: 50px'>
-						<div class="col-xs-4">
-							<div>
-								<div id="machine1" class="randomizeMachine">
-									<div><img src="img/slot1.png" /></div>
-									<div><img src="img/slot2.png" /></div>
-									<div><img src="img/slot3.png" /></div>
-									<div><img src="img/slot4.png" /></div>
-									<div><img src="img/slot5.png" /></div>
-									<div><img src="img/slot6.png" /></div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4">
-							<div>
-								<div id="machine2" class="randomizeMachine">
-									<div><img src="img/slot1.png" /></div>
-									<div><img src="img/slot2.png" /></div>
-									<div><img src="img/slot3.png" /></div>
-									<div><img src="img/slot4.png" /></div>
-									<div><img src="img/slot5.png" /></div>
-									<div><img src="img/slot6.png" /></div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-4">
-							<div>
-								<div id="machine3" class="randomizeMachine">
-									<div><img src="img/slot1.png" /></div>
-									<div><img src="img/slot2.png" /></div>
-									<div><img src="img/slot3.png" /></div>
-									<div><img src="img/slot4.png" /></div>
-									<div><img src="img/slot5.png" /></div>
-									<div><img src="img/slot6.png" /></div>
-								</div>
-							</div>
-						
-						</div>-->
-					</div>
-
-					<div>
-						
-					</div>
-					<div class="rows" style='margin-top: 20px;'>
-						<div id="premios1"></div>
-
-					</div>
-				</div>
-				<script>
-					var _0x1a02=['.png\x22\x20width=\x2250px\x22\x20height=\x2250px\x22/>','&nbsp;&nbsp;','<b>','o\x20premio\x20S/.\x20','\x20</b>','</div>','#winner','#machine1','slotMachine','#machine2','down','#machine3','machine1','text','Index:\x20','active','#machine2Result','machine3','#machine3Result','#ranomizeButton','click','shuffle','ready','<div\x20class=\x22row\x22\x20style=\x22padding-left:\x200px;\x20margin-bottom:\x2010px;\x22>','<img\x20class=\x22minislot\x22\x20src=\x22img/slot','.png\x22\x20width=\x2250px\x22\x20height=\x2250px\x22\x20/>&nbsp;&nbsp;'];(function(_0x2bf922,_0x4fbb38){var _0x232bc9=function(_0x53582b){while(--_0x53582b){_0x2bf922['push'](_0x2bf922['shift']());}};_0x232bc9(++_0x4fbb38);}(_0x1a02,0x19c));var _0x2492=function(_0x48b728,_0x4e4044){_0x48b728=_0x48b728-0x0;var _0x15af67=_0x1a02[_0x48b728];return _0x15af67;};$(document)[_0x2492('0x0')](function(){var _0x2ab90b='';var _0x991246=[0x61a8,0x4e20,0x3a98,0x2710,0x1388,0x3e8,0x1f4];for(i=0x1;i<=0x6;i++){_0x2ab90b+=_0x2492('0x1');_0x2ab90b+='<div\x20class=\x22col-xs-6\x22\x20style=\x22padding:\x200px;\x22\x20>';_0x2ab90b+=_0x2492('0x2')+i+_0x2492('0x3');_0x2ab90b+=_0x2492('0x2')+i+'.png\x22width=\x2250px\x22\x20height=\x2250px\x22/>&nbsp;&nbsp;';_0x2ab90b+='<img\x20class=\x22minislot\x22\x20src=\x22img/slot'+i+_0x2492('0x4');_0x2ab90b+='</div>';_0x2ab90b+='<div\x20class=\x22col-xs-6\x22\x20style=\x22margin-top:\x2020px;\x20\x22>';_0x2ab90b+=_0x2492('0x5');_0x2ab90b+=_0x2492('0x6')+i+_0x2492('0x7')+_0x991246[i]+_0x2492('0x8');_0x2ab90b+=_0x2492('0x9');_0x2ab90b+=_0x2492('0x9');}$(_0x2492('0xa'))['hide']();$('#premios1')['html'](_0x2ab90b);var _0x273d4d=-0x1;var _0x36471c=-0x1;var _0xd5b662=-0x1;var _0x26d672=$(_0x2492('0xb'))[_0x2492('0xc')]({'active':0x0,'delay':0x1f4});var _0x5db4b0=$(_0x2492('0xd'))[_0x2492('0xc')]({'active':0x1,'delay':0x1f4,'direction':_0x2492('0xe')});var _0x281129=$(_0x2492('0xf'))[_0x2492('0xc')]({'active':0x2,'delay':0x1f4});function _0x52a03d(_0x22dccb){switch(this['element'][0x0]['id']){case _0x2492('0x10'):$('#machine1Result')[_0x2492('0x11')](_0x2492('0x12')+this[_0x2492('0x13')]);_0x273d4d=this[_0x2492('0x13')];break;case'machine2':$(_0x2492('0x14'))[_0x2492('0x11')](_0x2492('0x12')+this[_0x2492('0x13')]);_0x36471c=this[_0x2492('0x13')];break;case _0x2492('0x15'):$(_0x2492('0x16'))[_0x2492('0x11')](_0x2492('0x12')+this[_0x2492('0x13')]);_0xd5b662=this[_0x2492('0x13')];break;}}$(_0x2492('0x17'))[_0x2492('0x18')](function(){_0x26d672[_0x2492('0x19')](0x5,_0x52a03d);setTimeout(function(){_0x5db4b0[_0x2492('0x19')](0x5,_0x52a03d);},0x1f4);setTimeout(function(){_0x281129['shuffle'](0x5,_0x52a03d);},0x3e8);setTimeout(function(){checkWin(_0x273d4d,_0x36471c,_0xd5b662);},0xfa0);});});
-				</script>
-
-
-				<!-- Watch example -->
-
-
-
-
-				<!-- Slot machine example -->
-				<div id="casino" style="padding-top:50px;">
-					<div class="content">
-						<h1>Juega y Gana!, Peru-Rusia2018 </h1>
-						<img id="winner2" src="img/winner.gif" />
-
-						<div>
-							<div id="casino1" class="slotMachine" style="margin-left: -65px;">
-								<div class="slot slot1"></div>
-								<div class="slot slot2"></div>
-								<div class="slot slot3"></div>
-								<div class="slot slot4"></div>
-								<div class="slot slot5"></div>
-								<div class="slot slot6"></div>
-							</div>
-
-							<div id="casino2" class="slotMachine">
-								<div class="slot slot1"></div>
-								<div class="slot slot2"></div>
-								<div class="slot slot3"></div>
-								<div class="slot slot4"></div>
-								<div class="slot slot5"></div>
-								<div class="slot slot6"></div>
-							</div>
-
-							<div id="casino3" class="slotMachine">
-								<div class="slot slot1"></div>
-								<div class="slot slot2"></div>
-								<div class="slot slot3"></div>
-								<div class="slot slot4"></div>
-								<div class="slot slot5"></div>
-								<div class="slot slot6"></div>
-							</div>
-
-							<div class="btn-group btn-group-justified btn-group-casino" role="group">
-								<div id="slotMachineButtonShuffle" type="button" class="btn btn-primary btn-lg">Jugar!</div>
-								<div id="slotMachineButtonStop" type="button" class="btn btn-primary btn-lg">Parar!</div>
-							</div>
-						</div>
-
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<script>
-					var _0x308f=['shuffle','#slotMachineButtonStop','stop','active','log','***\x20check\x20winner\x20','#winner','show','ready','#winner2','hide','#casino1','slotMachine','#casino3','#slotMachineButtonShuffle','click'];(function(_0x30de81,_0x453a52){var _0x376a3d=function(_0x18621d){while(--_0x18621d){_0x30de81['push'](_0x30de81['shift']());}};_0x376a3d(++_0x453a52);}(_0x308f,0x1a8));var _0x2836=function(_0x23cd67,_0xc1acdd){_0x23cd67=_0x23cd67-0x0;var _0x52ee82=_0x308f[_0x23cd67];return _0x52ee82;};$(document)[_0x2836('0x0')](function(){$(_0x2836('0x1'))[_0x2836('0x2')]();var _0x1ca469=$(_0x2836('0x3'))[_0x2836('0x4')]({'active':0x0,'delay':0x1f4});var _0x471635=$('#casino2')[_0x2836('0x4')]({'active':0x1,'delay':0x1f4});machine6=$(_0x2836('0x5'))[_0x2836('0x4')]({'active':0x2,'delay':0x1f4});var _0x26f1ae=0x0;var _0x5187f7=-0x1;var _0x5b57e1=-0x1;var _0x950195=-0x1;$(_0x2836('0x6'))[_0x2836('0x7')](function(){_0x26f1ae=0x3;_0x1ca469[_0x2836('0x8')]();_0x471635[_0x2836('0x8')]();machine6[_0x2836('0x8')]();});$(_0x2836('0x9'))[_0x2836('0x7')](function(){switch(_0x26f1ae){case 0x3:_0x1ca469[_0x2836('0xa')]();break;case 0x2:_0x471635[_0x2836('0xa')]();break;case 0x1:machine6['stop']();break;}_0x26f1ae--;if(_0x26f1ae==0x0){_0x5187f7=_0x1ca469[_0x2836('0xb')];_0x5b57e1=_0x471635[_0x2836('0xb')];_0x950195=machine6[_0x2836('0xb')];setTimeout(function(){checkWin(_0x1ca469[_0x2836('0xb')],_0x471635[_0x2836('0xb')],machine6[_0x2836('0xb')]);},0x7d0);}});});function checkWin(_0x486f96,_0x37502c,_0x210d87){console[_0x2836('0xc')](_0x2836('0xd')+_0x486f96+';'+_0x37502c+';'+_0x210d87);if(_0x486f96==_0x37502c&&_0x37502c==_0x210d87){$(_0x2836('0xe'))[_0x2836('0xf')]();}}
-
-		</script>
-
-
-		<!--<footer>
-			<div class="content">
-				<div id="textMachine" style="text-align: center">
-					<div>FORK!</div>
-					<div>SHARE!</div>
-					<div>USE IT!</div>
-				</div>
-				<script>
-					$(document).ready(function(){
-						$("#textMachine").slotMachine({
-							active	: 1,
-							delay	: 450,
-							auto	: 1500
-						});
-					});
-				</script>
-			</div>
-		</footer!-->
-
-	</body>
-	</html>
+  </html>
