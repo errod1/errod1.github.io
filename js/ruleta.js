@@ -21,31 +21,24 @@ contribuyentes.push({
 	intentos:0
 });
 var miRuleta = new Winwheel({
-           'numSegments': 21, // Número de segmentos
+           'numSegments': 6, // Número de segmentos
            'outerRadius'    : 170, // Radio externo
             'segments':[ // Datos de los segmentos
             { 'fillStyle': '#ff0000', 'text': '/S 25000' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Fuerza Peru' },
-            { 'fillStyle': '#ffffff', 'text': 'Suerte!' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Arriba Peru!' },
-            { 'fillStyle': '#ffffff', 'text': 'Rusia 2018' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Suerte!' },
-            { 'fillStyle': '#ffffff', 'text': 'Arriba Peru!' },
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 100' },
+            
             { 'fillStyle': '#ff0000', 'text': '/S  5000' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Fuerza Peru' },
-            { 'fillStyle': '#ffffff', 'text': 'Suerte!' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Arriba Peru!' },
-            { 'fillStyle': '#ffffff', 'text': 'Rusia 2018' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Suerte!' },
-            { 'fillStyle': '#ffffff', 'text': 'Arriba Peru!' },
-            { 'fillStyle': '#ff0000', 'text': '/S    50' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Suerte!' },
-            { 'fillStyle': '#ffffff', 'text': 'Arriba Peru!' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Suerte!' },
-            { 'fillStyle': '#ffffff', 'text': 'Arriba Peru!' },
-            { 'fillStyle': '#a8a8a8', 'text': 'Suerte!' },
-            { 'fillStyle': '#ffffff', 'text': 'Arriba Peru!' }
-            ],
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 50' },
+            
+            { 'fillStyle': '#ff0000', 'text': '/S    1000' },
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 10' }
+                        ],
             'animation': { 
                 'type': 'spinToStop', // Giro y alto
                 'duration': 5, // Duración de giro
@@ -130,6 +123,18 @@ function jugar() {
 
 }
 
+function reclamar() {
+	if (contribuyente.win) {
+		$("#play").hide();
+		$("#reclamar-premio").show();
+		$("#ganador-premio").html(contribuyente.nombres +" has sido ganador de " + contribuyente.premio +" !, Gracias por participar.");
+	}
+}
+
+function continuar() {
+	location.reload();
+}
+
 function dibujarIndicador() {
 	var ctx = miRuleta.ctx;
 	ctx.strokeStyle = 'navy';     
@@ -156,6 +161,7 @@ function Mensaje() {
 	if (SegmentoSeleccionado.text.startsWith("/S")) {
 		contribuyente.premio=SegmentoSeleccionado.text;
 		contribuyente.win=true;
+		$("#btn-reclamar").val("Reclamar "+contribuyente.premio+ " !");
 		$("#winner").show();
 		$("#btn-jugar").prop("disabled",true);
 	}

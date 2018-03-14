@@ -82,7 +82,7 @@
 					<div class="form-group mx-sm-3">
 						<input type="text" class="form-control" id="dni" placeholder="DNI">
 					</div>
-					<input id="btn-iniciar" type="button" class="btn btn-success btn-xl js-scroll-trigger"  value="Continuar" />
+					<input id="btn-iniciar" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Continuar" />
 				</form>
 			</div>
 		</div>
@@ -118,19 +118,36 @@
 			</div>
 		</div>
 
+		<!-- play -->
 		<div class="row" id="play" style="display:none">
 			<div class="col-lg-6 mx-auto">
 				<h2>Prueba tu Suerte!</h2>
 				<p class="lead mb-5" id="title-jugar"></p>
 				
-				<img style="display:none" id="winner" src="img/winner.gif" />
-				<input id="btn-jugar" type="button" class="btn btn-success btn-xl js-scroll-trigger" onclick="jugar();" value="Girar" />
+				<div class="lead mb-5" id="winner" style="display:none">
+					<img id="winner" src="img/winner.gif" />
+					<input id="btn-reclamar" type="button" class="btn btn-success btn-xl js-scroll-trigger" onclick="reclamar();" value="Reclamar Premio!" />
+				</div>
+				<input id="btn-jugar" type="button" class="btn btn-danger btn-xl js-scroll-trigger" onclick="jugar();" value="Girar" />
 				<canvas id='canvas' width='400' height='400'>
 					Canvas not supported, use another browser.
 				</canvas>
 				<label class="lead mb-5" id="jugada"></label>
 			</div>
 		</div>
+
+		<!-- reclamar -->
+		<div class="row" id="reclamar-premio" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Felicitaciones!</h2>
+				<p class="lead mb-5" id="ganador-premio"></p>
+				
+				<input id="btn-go" type="button" class="btn btn-primary btn-xl js-scroll-trigger" onclick="continuar();" value="Continuar" />
+
+			</div>
+		</div>
+
+
 	</div>
 </section>
 
