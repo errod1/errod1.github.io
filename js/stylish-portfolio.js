@@ -80,7 +80,10 @@ var miRuleta = new Winwheel({
 
 $(document).ready(function(){
 
+  $("#btn-inicio").click(function() {
 
+    alert("Validar DNI"); 
+  });
   
  
 });
