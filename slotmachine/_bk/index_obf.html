@@ -172,18 +172,27 @@
 						var index3=-1;
 						var machine1 = $("#machine1").slotMachine({
 							active	: 0,
-							delay	: 500
+							delay	: 500,
+							randomize : function(activeElementIndex){
+								return 0;
+							}
 						});
 
 						var machine2 = $("#machine2").slotMachine({
 							active	: 1,
 							delay	: 500,
-							direction: 'down'
+							direction: 'down',
+							randomize : function(activeElementIndex){
+								return 0;
+							}
 						});
 
 						var machine3 = $("#machine3").slotMachine({
 							active	: 2,
-							delay	: 500
+							delay	: 500,
+							randomize : function(activeElementIndex){
+								return 0;
+							}
 						});
 
 						function onComplete(active){

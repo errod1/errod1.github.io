@@ -1,1 +1,238 @@
-var _0x136b=['fillStyle','black','lineWidth','beginPath','moveTo','lineTo','fill','#title-jugar','\x20,tienes\x20','#btn-jugar','disabled','#jugada','text','startsWith','Reclamar\x20','prop','stopAnimation','push','12345678','Pedro','Pablo','#ff0000','/S\x2025000','#a8a8a8','/S\x20100','/S\x20\x205000','/S\x20\x20\x20\x201000','/S\x2010','spinToStop','Mensaje()','dibujarIndicador()','ready','#btn-iniciar','click','#btn-actualizar','#dni','#inicio','hide','show','#title-contribuyente','html','DNI:\x20','#nombres','val','nombres','#apellidos','email','No\x20registrado!\x20:(','filter','dni','#actualizar','#play',',\x20tienes\x20','intentos','\x20intentos\x20para\x20Jugar!','No\x20tienes\x20oportunidades\x20de\x20jugar!\x20:(','Falta\x20actualizar!','win','rotationAngle','draw','startAnimation','Felicitaciones\x20has\x20ganado\x20','premio','\x20!!!\x20','Lo\x20sentimos\x20ya\x20no\x20tiene\x20oportunidades\x20de\x20jugar!\x20:(','\x20has\x20sido\x20ganador\x20de\x20','\x20!,\x20Gracias\x20por\x20participar.','reload','strokeStyle'];(function(_0x29e68f,_0x2ac693){var _0x3a10c3=function(_0x22715c){while(--_0x22715c){_0x29e68f['push'](_0x29e68f['shift']());}};_0x3a10c3(++_0x2ac693);}(_0x136b,0x125));var _0xdfb6=function(_0x19a408,_0x28cbba){_0x19a408=_0x19a408-0x0;var _0x3eee99=_0x136b[_0x19a408];return _0x3eee99;};var contribuyentes=[];var contribuyente=null;contribuyentes[_0xdfb6('0x0')]({'dni':_0xdfb6('0x1'),'nombres':_0xdfb6('0x2'),'apellidos':'Perez\x20G','email':'pedro.perez@mail.com','win':![],'premio':'','intentos':0x3});contribuyentes[_0xdfb6('0x0')]({'dni':'123456','nombres':_0xdfb6('0x3'),'apellidos':'','email':'','win':![],'premio':'','intentos':0x0});var miRuleta=new Winwheel({'numSegments':0x6,'outerRadius':0xaa,'segments':[{'fillStyle':_0xdfb6('0x4'),'text':_0xdfb6('0x5')},{'fillStyle':_0xdfb6('0x6'),'text':_0xdfb6('0x7')},{'fillStyle':'#ff0000','text':_0xdfb6('0x8')},{'fillStyle':_0xdfb6('0x6'),'text':'/S\x2050'},{'fillStyle':_0xdfb6('0x4'),'text':_0xdfb6('0x9')},{'fillStyle':_0xdfb6('0x6'),'text':_0xdfb6('0xa')}],'animation':{'type':_0xdfb6('0xb'),'duration':0x5,'callbackFinished':_0xdfb6('0xc'),'callbackAfter':_0xdfb6('0xd')}});$(document)[_0xdfb6('0xe')](function(){$(_0xdfb6('0xf'))[_0xdfb6('0x10')](function(){iniciar();});$(_0xdfb6('0x11'))[_0xdfb6('0x10')](function(){actualizar();});});function iniciar(){var _0x147911=$(_0xdfb6('0x12'))['val']();contribuyente=contribuyentes['find'](_0x2ac6d3=>{return _0x2ac6d3['dni']==_0x147911;});if(contribuyente!=null){$(_0xdfb6('0x13'))[_0xdfb6('0x14')]();$('#actualizar')[_0xdfb6('0x15')]();$(_0xdfb6('0x16'))[_0xdfb6('0x17')](_0xdfb6('0x18')+_0x147911);$(_0xdfb6('0x19'))[_0xdfb6('0x1a')](contribuyente[_0xdfb6('0x1b')]);$(_0xdfb6('0x1c'))[_0xdfb6('0x1a')](contribuyente['apellidos']);$('#email')[_0xdfb6('0x1a')](contribuyente[_0xdfb6('0x1d')]);}else{alert(_0xdfb6('0x1e'));}}function actualizar(){if(contribuyente!=null){contribuyentes=contribuyentes[_0xdfb6('0x1f')](function(_0x589fe7){return _0x589fe7['dni']!==contribuyente[_0xdfb6('0x20')];});contribuyente['nombres']=$(_0xdfb6('0x19'))[_0xdfb6('0x1a')]();contribuyente['apellidos']=$(_0xdfb6('0x1c'))[_0xdfb6('0x1a')]();contribuyente[_0xdfb6('0x1d')]=$('#email')[_0xdfb6('0x1a')]();contribuyentes[_0xdfb6('0x0')](contribuyente);if(contribuyente['intentos']>0x0){$(_0xdfb6('0x21'))['hide']();$(_0xdfb6('0x22'))[_0xdfb6('0x15')]();$('#title-jugar')[_0xdfb6('0x17')](contribuyente['nombres']+_0xdfb6('0x23')+contribuyente[_0xdfb6('0x24')]+_0xdfb6('0x25'));}else{alert(_0xdfb6('0x26'));}}else{alert(_0xdfb6('0x27'));}}function jugar(){if(contribuyente[_0xdfb6('0x24')]>0x0&&!contribuyente[_0xdfb6('0x28')]){$('#jugada')['html']('');miRuleta[_0xdfb6('0x29')]=0x0;miRuleta[_0xdfb6('0x2a')]();dibujarIndicador();miRuleta[_0xdfb6('0x2b')]();}else{if(contribuyente[_0xdfb6('0x28')]){alert(_0xdfb6('0x2c')+contribuyente[_0xdfb6('0x2d')]+_0xdfb6('0x2e'));}else{alert(_0xdfb6('0x2f'));}}}function reclamar(){if(contribuyente[_0xdfb6('0x28')]){$(_0xdfb6('0x22'))[_0xdfb6('0x14')]();$('#reclamar-premio')['show']();$('#ganador-premio')['html'](contribuyente[_0xdfb6('0x1b')]+_0xdfb6('0x30')+contribuyente[_0xdfb6('0x2d')]+_0xdfb6('0x31'));}}function continuar(){location[_0xdfb6('0x32')]();}function dibujarIndicador(){var _0x199649=miRuleta['ctx'];_0x199649[_0xdfb6('0x33')]='navy';_0x199649[_0xdfb6('0x34')]=_0xdfb6('0x35');_0x199649[_0xdfb6('0x36')]=0x2;_0x199649[_0xdfb6('0x37')]();_0x199649[_0xdfb6('0x38')](0xaa,0x0);_0x199649['lineTo'](0xe6,0x0);_0x199649[_0xdfb6('0x39')](0xc8,0x28);_0x199649[_0xdfb6('0x39')](0xab,0x0);_0x199649['stroke']();_0x199649[_0xdfb6('0x3a')]();}function Mensaje(){contribuyente[_0xdfb6('0x24')]-=0x1;$(_0xdfb6('0x3b'))[_0xdfb6('0x17')](contribuyente[_0xdfb6('0x1b')]+_0xdfb6('0x3c')+contribuyente[_0xdfb6('0x24')]+_0xdfb6('0x25'));var _0x98ef31=miRuleta['getIndicatedSegment']();if(contribuyente['intentos']==0x0){$(_0xdfb6('0x3d'))['prop'](_0xdfb6('0x3e'),!![]);}$(_0xdfb6('0x3f'))[_0xdfb6('0x17')](_0x98ef31[_0xdfb6('0x40')]);if(_0x98ef31[_0xdfb6('0x40')][_0xdfb6('0x41')]('/S')){contribuyente[_0xdfb6('0x2d')]=_0x98ef31['text'];contribuyente[_0xdfb6('0x28')]=!![];$('#btn-reclamar')[_0xdfb6('0x1a')](_0xdfb6('0x42')+contribuyente[_0xdfb6('0x2d')]+'\x20!');$('#winner')[_0xdfb6('0x15')]();$(_0xdfb6('0x3d'))[_0xdfb6('0x43')]('disabled',!![]);}miRuleta[_0xdfb6('0x44')](![]);}
+// ruleta.js
+
+var contribuyentes=[];
+var contribuyente=null;
+contribuyentes.push({
+	dni:"12345678",
+	nombres:"Pedro",
+	apellidos: "Perez G",
+	email:"pedro.perez@mail.com",
+	win:false,
+	premio:"",
+	intentos:3
+});
+contribuyentes.push({
+	dni:"12345679",
+	nombres:"Maria",
+	apellidos: "Perez G",
+	email:"maria.perez@mail.com",
+	win:false,
+	premio:"",
+	intentos:3
+});
+contribuyentes.push({
+	dni:"123456",
+	nombres:"Pablo",
+	apellidos: "",
+	email:"",
+	win:false,
+	premio:"",
+	intentos:0
+});
+var miRuleta = new Winwheel({
+           'numSegments': 6, // Número de segmentos
+           'outerRadius'    : 170, // Radio externo
+            'segments':[ // Datos de los segmentos
+            { 'fillStyle': '#ff0000', 'text': '/S 25000' },
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 100' },
+            
+            { 'fillStyle': '#ff0000', 'text': '/S  5000' },
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 50' },
+            
+            { 'fillStyle': '#ff0000', 'text': '/S    1000' },
+            
+            
+            { 'fillStyle': '#a8a8a8', 'text': '/S 10' }
+            ],
+            'animation': { 
+                'type': 'spinToStop', // Giro y alto
+                'duration': 5, // Duración de giro
+                'callbackFinished': 'Mensaje()', // Función para mostrar mensaje
+                'callbackAfter': 'dibujarIndicador()' // Funciona de pintar indicador
+            }
+        });
+
+var images = ['<img src="img/seven.png">','<img src="img/banana.png">','<img src="img/cherries.png">','<img src="img/lemon.png">','<img src="img/orange.png">','<img src="img/plum.png">','<img src="img/watermelon.png">'];
+
+var images2 = [
+'<img src="img/slot1.png">',
+'<img src="img/slot2.png">',
+'<img src="img/slot3.png">',
+'<img src="img/slot4.png">',
+'<img src="img/slot5.png">',
+'<img src="img/slot6.png">'];
+
+//var ezslot = new EZSlots("ezslots",{"reelCount":4,"winningSet":[0,0,0,0],"symbols":images,"height":126,"width":126});
+
+var ezslot = new EZSlots("ezslots",{"reelCount":3,"winningSet":[3,3,3,3],"symbols":images2,"height":126,"width":126,"callback":winslot});
+
+
+$(document).ready(function(){
+
+
+	$("#btn-iniciar").click(function() {
+		iniciar();
+	});
+
+	$("#btn-actualizar").click(function() {
+		actualizar();
+	});
+
+});
+
+function iniciar() {
+	var dni=$("#dni").val();
+	contribuyente= contribuyentes.find(item => {
+		return item.dni == dni
+	});
+	if (contribuyente!=null) {
+		$("#inicio").hide();
+		$("#actualizar").show();
+		$("#title-contribuyente").html("DNI: "+dni);
+		$("#nombres").val(contribuyente.nombres);
+		$("#apellidos").val(contribuyente.apellidos);
+		$("#email").val(contribuyente.email);
+	} else {
+		alert("No registrado! :(");
+	}
+}
+
+function actualizar() {
+	if (contribuyente!=null) {
+		contribuyentes = contribuyentes.filter(function(item) { 
+			return item.dni !== contribuyente.dni
+		})
+		contribuyente.nombres=$("#nombres").val();
+		contribuyente.apellidos=$("#apellidos").val();
+		contribuyente.email=$("#email").val();
+		contribuyentes.push(contribuyente);
+
+
+		if (contribuyente.intentos>0) {
+			$("#actualizar").hide();
+			if (contribuyente.dni=="12345678") {
+				$("#play").show();	
+			} else {
+				$("#slotmachine").show();	
+			}
+			
+			
+			$("#title-jugar").html(contribuyente.nombres +", tienes " + contribuyente.intentos + " intentos para Jugar!");
+
+		} else {
+			alert("No tienes oportunidades de jugar! :(");
+		}
+	} else {
+		alert("Falta actualizar!");
+	}
+}
+
+function jugar() {
+	
+	if (contribuyente.intentos>0 && !contribuyente.win) {
+		$("#jugada").html("");
+		miRuleta.rotationAngle = 0;
+		miRuleta.draw();
+		dibujarIndicador();
+		miRuleta.startAnimation();
+		
+
+	} else {
+		if (contribuyente.win) {
+			alert("Felicitaciones has ganado " + contribuyente.premio + " !!! ");
+		} else {
+			alert("Lo sentimos ya no tiene oportunidades de jugar! :(");
+		}
+	}
+
+}
+
+
+function jugar2() {
+	
+	if (contribuyente.intentos>0 && !contribuyente.win) {
+		ezslot.win()
+
+	} else {
+		if (contribuyente.win) {
+			alert("Felicitaciones has ganado " + contribuyente.premio + " !!! ");
+		} else {
+			alert("Lo sentimos ya no tiene oportunidades de jugar! :(");
+		}
+	}
+
+}
+
+function winslot(results) {
+	contribuyente.intentos -= 1;
+	if (contribuyente.intentos==0) {
+		$("#btn-jugar").prop("disabled",true);
+	}
+	if (results[0]==results[1] && results[0]==results[1]) {
+		contribuyente.premio="/s 5000";
+		contribuyente.win=true;
+		$("#btn-reclamar2").val("Reclamar "+contribuyente.premio+ " !");
+		$("#winner2").show();
+		$("#btn-jugar2").prop("disabled",true);
+	}
+
+}
+
+
+function reclamar() {
+	if (contribuyente.win) {
+		$("#play").hide();
+		$("#reclamar-premio").show();
+		$("#ganador-premio").html(contribuyente.nombres +" has sido ganador de " + contribuyente.premio +" !, Gracias por participar.");
+	}
+}
+
+function reclamar2() {
+	if (contribuyente.win) {
+		$("#slotmachine").hide();
+		$("#reclamar-premio").show();
+		$("#ganador-premio").html(contribuyente.nombres +" has sido ganador de " + contribuyente.premio +" !, Gracias por participar.");
+	}
+}
+
+function continuar() {
+	location.reload();
+}
+
+function dibujarIndicador() {
+	var ctx = miRuleta.ctx;
+	ctx.strokeStyle = 'navy';     
+	ctx.fillStyle = 'black';     
+	ctx.lineWidth = 2;
+	ctx.beginPath();             
+	ctx.moveTo(170, 0);          
+	ctx.lineTo(230, 0);          
+	ctx.lineTo(200, 40);
+	ctx.lineTo(171, 0);
+	ctx.stroke();                
+	ctx.fill();                  
+}
+
+function Mensaje() {
+	contribuyente.intentos -= 1;
+	$("#title-jugar").html(contribuyente.nombres +" ,tienes " + contribuyente.intentos + " intentos para Jugar!");
+	var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
+	//alert("Elemento seleccionado:" + SegmentoSeleccionado.text + "!");
+	if (contribuyente.intentos==0) {
+		$("#btn-jugar").prop("disabled",true);
+	}
+	$("#jugada").html(SegmentoSeleccionado.text);
+	if (SegmentoSeleccionado.text.startsWith("/S")) {
+		contribuyente.premio=SegmentoSeleccionado.text;
+		contribuyente.win=true;
+		$("#btn-reclamar").val("Reclamar "+contribuyente.premio+ " !");
+		$("#winner").show();
+		$("#btn-jugar").prop("disabled",true);
+	}
+	miRuleta.stopAnimation(false);
+	
+}

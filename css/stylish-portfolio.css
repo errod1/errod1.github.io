@@ -373,3 +373,16 @@ canvas {
   width: 100%;
   height: auto;
 }
+
+.ezslots {
+  margin-top: 20px;
+  background-color: white; 
+  width: 100%;
+  height: auto;
+}
+
+.window {
+  font-size:40px;
+  font-family:arial,helvetica,sans-serif; 
+  border:1px solid black;
+}
