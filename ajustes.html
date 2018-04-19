@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Stylish Portfolio - Start Bootstrap Template</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/ezslots.css" rel="stylesheet">
+	<link href="css/stylish-portfolio.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="css/jquery.slotmachine.css" type="text/css" media="screen" />
+  	<link href="css/style.css" rel="stylesheet">-->
+
+  </head>
+  <style>
+  .badge {
+    font-size: 15px;
+    background-color: rgb(0, 175, 225);
+}
+</style>
+
+  <body id="page-top">
+  	<!-- Navigation -->
+  	<a class="menu-toggle rounded" href="#">
+  		<i class="fa fa-bars"></i>
+  	</a>
+  	<nav id="sidebar-wrapper">
+  		<ul class="sidebar-nav">
+  			<li class="sidebar-brand">
+  				<a class="js-scroll-trigger" href="index.html">Juega y Gana!</a>
+  			</li>
+  			<li class="sidebar-nav-item">
+  				<a class="js-scroll-trigger" href="#page-top">Inicio</a>
+  			</li>
+  			<!--<li class="sidebar-nav-item">
+  				<a class="js-scroll-trigger" href="#about">About</a>
+  			</li>-->
+  			<!--<li class="sidebar-nav-item">
+  				<a class="js-scroll-trigger" href="#ajustes"><i class="fa fa-cog"></i> Ajustes</a>
+  			</li>-->
+  			<!--<li class="sidebar-nav-item">
+  				<a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+  			</li>-->
+  			<li class="sidebar-nav-item">
+  				<a class="js-scroll-trigger" href="#contact">Contactos</a>
+  			</li>
+  		</ul>
+  	</nav>
+
+  	<!-- Header -->
+  <!--<header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">Stylish Portfolio</h1>
+      <h3 class="mb-5">
+        <em>A Free Bootstrap Theme by Start Bootstrap</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
+</header>-->
+
+<!-- About -->
+<section class="content-section bg-light" id="page-top">
+	<div class="container text-center">
+		<!-- inicio -->
+		
+		
+
+
+		<!-- actualizar -->
+		<div class="row" id="acceso" >
+			<div class="col-lg-6 mx-auto">
+				<h2>Ajustes Generales</h2>
+				<p class="lead mb-5">Acceso</p>
+				
+				<form>
+					<div class="form-group row">
+						<label for="nombres" class="col-2 col-form-label">Usuario</label>
+						<div class="col-10">
+							<input class="form-control" type="text" placeholder="Usuario" id="usuario">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="apellidos" class="col-2 col-form-label">Clave</label>
+						<div class="col-10">
+							<input class="form-control" type="password" placeholder="Clave" id="password">
+						</div>
+					</div>
+					
+					
+					<input id="btn-admin" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Entrar" />
+				</form>
+			</div>
+		</div>
+
+		<!-- play -->
+		<div class="row" id="admin" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Ajustes Generales</h2>
+				<p class="lead mb-5" >Click en Opcion</p>
+				
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input onClick="tipoJuego()" id="btn-0" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Tipo de Juego" />
+				</div>
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input onClick="premios()" id="btn-1" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Premios" />
+				</div>
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input onClick="vigencia()" id="btn-2" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Vigencia" />
+				</div>
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input onClick="condiciones()" id="btn-3" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Condiciones" />
+				</div>
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input id="btn-4" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Otros" />
+				</div>
+
+				<div class="col-sd-6" style="margin-bottom: 20px;">
+					<input onClick="salir()" id="btn-5" type="button" class="btn btn-primary btn-block btn-xl js-scroll-trigger"  value="Salir" />
+				</div>
+					
+				
+			</div>
+		</div>
+
+
+		<!-- tipo de juego -->
+		<div class="row" id="tipo-juego" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Tipo de Juego</h2>
+				<p class="lead mb-5" >Ajustes Generales</p>
+				
+				<form>
+					<div class="col-xs-10 form-group text-left"  style='margin-left: 50px'>
+                      <input type="radio" class="form-check-input" id="tipo_juego" name="r_tipo_juego" checked>
+                      <label class="form-check-label" for="tipo_juego">Traga Monedas</label>
+                    </div>
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-10 form-group text-left"  style='margin-left: 50px'>
+                      <input type="radio" class="form-check-input" id="tipo_juego" name="r_tipo_juego">
+                      <label class="form-check-label" for="tipo_juego">Rueda de la Fortuna</label>
+                    </div>
+                    <div class="col-xs-2"></div>
+					
+					
+					<input id="btn-act-tipojuego" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Actualizar" />
+				</form>
+			</div>
+		</div>
+
+
+		<!-- premios -->
+		<div class="row" id="premios" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Premios</h2>
+				<p class="lead mb-5" >Ajustes Generales</p>
+				
+				<form>
+					<!--<input id="btn-add-premios" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Añadir" />-->
+
+					<a href="#" class="btn"><i class="fa fa-plus"></i> Añadir Premio</a>
+					<ul class="list-group" style="margin-bottom: 20px">
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		1 Premio <span class="badge">S/ 50000 </span>
+					  	</div>
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		2 Premio <span class="badge">S/ 5000 </span>
+					  	</div>
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		3 Premio <span class="badge">S/ 1000 </span>
+					  	</div>
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					</ul>
+					
+					
+					<input id="btn-act-premios" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Actualizar" />
+				</form>
+			</div>
+		</div>
+
+
+		<!-- tipo de juego -->
+		<div class="row" id="vigencia" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Vigencia</h2>
+				<p class="lead mb-5" >Ajustes Generales</p>
+				
+				<form>
+					
+					<div class="form-group row">
+						<label for="desde" class="col-2 col-form-label">Desde</label>
+						<div class="col-10">
+							<input class="form-control" type="date" placeholder="Usuario" id="desde">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="hasta" class="col-2 col-form-label">Hasta</label>
+						<div class="col-10">
+							<input class="form-control" type="date" placeholder="Clave" id="hasta">
+						</div>
+					</div>
+					
+					<input id="btn-act-vigencia" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Actualizar" />
+				</form>
+			</div>
+		</div>
+
+
+		<!-- condiciones -->
+		<div class="row" id="condiciones" style="display:none">
+			<div class="col-lg-6 mx-auto">
+				<h2>Condiciones</h2>
+				<p class="lead mb-5" >Ajustes Generales</p>
+				
+				<form>
+					<!--<input id="btn-add-premios" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Añadir" />-->
+
+					<a href="#" class="btn"><i class="fa fa-plus"></i> Añadir Condicion</a>
+					<ul class="list-group" style="margin-bottom: 20px">
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		DNI Registrado 
+					  	</div> 
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		Pagos al Dia
+					  	</div>
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					  <li class="list-group-item row d-flex">
+					  	<div class="col-8">
+					  		Actualizar Datos Direccion
+					  	</div>
+					  	<div class="col-4">
+					  		<i class="fa fa-edit"></i>&nbsp;
+					  		<i class="fa fa-trash"></i>	
+					  	</div>
+					  </li>
+					</ul>
+					
+					
+					<input id="btn-act-condiciones" type="button" class="btn btn-primary btn-xl js-scroll-trigger"  value="Actualizar" />
+				</form>
+			</div>
+		</div>
+		
+
+
+	</div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer text-center" id="redes">
+	<div class="container">
+		<ul class="list-inline mb-5">
+			<li class="list-inline-item">
+				<a class="social-link rounded-circle text-white mr-3" href="#">
+					<i class="icon-social-facebook"></i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="social-link rounded-circle text-white mr-3" href="#">
+					<i class="icon-social-twitter"></i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="social-link rounded-circle text-white" href="#">
+					<i class="icon-social-github"></i>
+				</a>
+			</li>
+		</ul>
+		<p class="text-muted small mb-0">Copyright &copy; Your Website 2017</p>
+	</div>
+</footer>
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+	<i class="fa fa-angle-up"></i>
+</a>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script type="text/javascript" src="js/Winwheel.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script src="js/stylish-portfolio.min.js"></script>
+<script src="js/ezslots.js"></script>
+<script src="js/ruleta.js"></script>
+
+</body>
+
+</html>

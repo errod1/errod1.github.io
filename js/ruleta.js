@@ -82,6 +82,30 @@ $(document).ready(function(){
 		actualizar();
 	});
 
+	$("#btn-admin").click(function() {
+		admin();
+	});
+
+	$("#btn-act-tipojuego").click(function() {
+		$("#admin").toggle();
+		$("#tipo-juego").toggle();
+	});
+
+	$("#btn-act-premios").click(function() {
+		$("#admin").toggle();
+		$("#premios").toggle();
+	});
+
+	$("#btn-act-vigencia").click(function() {
+		$("#admin").toggle();
+		$("#vigencia").toggle();
+	});
+
+	$("#btn-act-condiciones").click(function() {
+		$("#admin").toggle();
+		$("#condiciones").toggle();
+	});
+
 });
 
 function iniciar() {
@@ -129,6 +153,45 @@ function actualizar() {
 	} else {
 		alert("Falta actualizar!");
 	}
+}
+
+function admin() {
+
+	var usuario = $("#usuario").val();
+	var clave = $("#password").val();
+
+	if (usuario=="admin" && clave=="admin") {
+		$("#acceso").hide();
+		$("#admin").show();
+	} else {
+		alert("Usuario o Clave incorrecta");
+	}
+
+
+}
+
+function salir() {
+	window.location="index.html";
+}
+
+function tipoJuego() {
+	$("#admin").hide();
+	$("#tipo-juego").show();
+}
+
+function premios() {
+	$("#admin").hide();
+	$("#premios").show();
+}
+
+function vigencia() {
+	$("#admin").hide();
+	$("#vigencia").show();
+}
+
+function condiciones() {
+	$("#admin").hide();
+	$("#condiciones").show();
 }
 
 function jugar() {
