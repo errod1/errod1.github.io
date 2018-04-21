@@ -70,6 +70,7 @@ var images2 = [
 
 var ezslot = new EZSlots("ezslots",{"reelCount":3,"winningSet":[3,3,3,3],"symbols":images2,"height":126,"width":126,"callback":winslot});
 
+var isHuman=false;
 
 $(document).ready(function(){
 
@@ -110,11 +111,17 @@ $(document).ready(function(){
 
 
 var correctCaptcha = function(response) {
-        alert(response);
+	isHuman=(response.length!=0);
+	//if (response.length)
+    //    alert(response);
     };
 
 
 function iniciar() {
+	if (!isHuman) {
+		alert("Error Verificacion Captcha!");
+		return false;
+	}
 	var dni=$("#dni").val();
 	contribuyente= contribuyentes.find(item => {
 		return item.dni == dni
