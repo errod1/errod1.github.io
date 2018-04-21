@@ -108,6 +108,12 @@ $(document).ready(function(){
 
 });
 
+
+var correctCaptcha = function(response) {
+        alert(response);
+    };
+
+
 function iniciar() {
 	var dni=$("#dni").val();
 	contribuyente= contribuyentes.find(item => {
