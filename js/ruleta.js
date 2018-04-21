@@ -170,6 +170,10 @@ function actualizar() {
 
 function admin() {
 
+	if (!isHuman) {
+		alert("Error Verificacion Captcha!");
+		return false;
+	}
 	var usuario = $("#usuario").val();
 	var clave = $("#password").val();
 
