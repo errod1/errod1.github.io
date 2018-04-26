@@ -110,9 +110,10 @@ $(document).ready(function(){
 
 function iniciar() {
 	var dni=$("#dni").val();
-	contribuyente= contribuyentes.find(item => {
+	/*contribuyente= contribuyentes.find(item => {
 		return item.dni == dni
-	});
+	});*/
+	contribuyente = contribuyentes[0];
 	if (contribuyente!=null) {
 		$("#inicio").hide();
 		$("#actualizar").show();
@@ -153,6 +154,11 @@ function actualizar() {
 	} else {
 		alert("Falta actualizar!");
 	}
+}
+
+
+function click_admin() {
+	admin(); 
 }
 
 function admin() {
@@ -289,7 +295,9 @@ function Mensaje() {
 		$("#btn-jugar").prop("disabled",true);
 	}
 	$("#jugada").html(SegmentoSeleccionado.text);
-	if (SegmentoSeleccionado.text.startsWith("/S")) {
+	//if (SegmentoSeleccionado.text.startsWith("/S")) {
+		console.log(SegmentoSeleccionado.text);
+	if (SegmentoSeleccionado.text.indexOf("/S")==0) {
 		contribuyente.premio=SegmentoSeleccionado.text;
 		contribuyente.win=true;
 		$("#btn-reclamar").val("Reclamar "+contribuyente.premio+ " !");
