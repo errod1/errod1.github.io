@@ -118,14 +118,21 @@ var correctCaptcha = function(response) {
 
 
 function iniciar() {
+	isHuman=true;
 	if (!isHuman) {
 		alert("Error Verificacion Captcha!");
 		return false;
 	}
 	var dni=$("#dni").val();
-	contribuyente= contribuyentes.find(item => {
+	/*contribuyente= contribuyentes.find(item => {
 		return item.dni == dni
-	});
+	});*/
+	contribuyente=null;
+	contribuyentes.forEach(function (item, index) { 
+		if (item.dni==dni) {
+			contribuyente=item;
+		}
+	 })
 	if (contribuyente!=null) {
 		$("#inicio").hide();
 		$("#actualizar").show();
@@ -306,7 +313,8 @@ function Mensaje() {
 		$("#btn-jugar").prop("disabled",true);
 	}
 	$("#jugada").html(SegmentoSeleccionado.text);
-	if (SegmentoSeleccionado.text.startsWith("/S")) {
+	//if (SegmentoSeleccionado.text.startsWith("/S")) {
+	if (SegmentoSeleccionado.text.indexOf("/S")==0) {	
 		contribuyente.premio=SegmentoSeleccionado.text;
 		contribuyente.win=true;
 		$("#btn-reclamar").val("Reclamar "+contribuyente.premio+ " !");
